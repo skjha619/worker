@@ -1,15 +1,15 @@
 name: vote-app-pipeline
 on: push
 env:
-    serviceName: vote
-    depName: voting-app-deployment
-    containerName: voting-app-container
+    serviceName: worker
+    depName: worker-app-deployment
+    containerName: worker-app-container 
     environment: green
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3   # important to checkout code
+      - uses: actions/checkout@v3   
       - name: fetching short commit id
         run: |
              commitId=$(echo ${{ github.sha }})
