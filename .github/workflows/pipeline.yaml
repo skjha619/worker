@@ -16,7 +16,7 @@ jobs:
              shortCommitId=${commitId:0:7}
              echo "SHORT_COMMIT_ID=$shortCommitId" >> $GITHUB_ENV
 
-      - name: ACR login-
+      - name: ACR login
         uses: docker/login-action@v3
         with:
             registry: ${{secrets.ACR_LOGIN_SERVER}}
